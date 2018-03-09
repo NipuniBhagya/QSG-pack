@@ -13,12 +13,14 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mgt="http://mgt.idp.carbon.wso2.org">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://mgt.workflow.identity.carbon.wso2.org/xsd">
     <soapenv:Header/>
     <soapenv:Body>
-        <mgt:deleteIdP>
-            <!--Optional:-->
-            <mgt:idPName>IDP-twitter</mgt:idPName>
-        </mgt:deleteIdP>
+        <xsd:addAssociation>
+            <xsd:associationName>add-user-association</xsd:associationName>
+            <xsd:workflowId>10</xsd:workflowId>
+            <xsd:eventId>ADD_USER</xsd:eventId>
+            <xsd:condition>boolean(1)</xsd:condition>
+        </xsd:addAssociation>
     </soapenv:Body>
 </soapenv:Envelope>

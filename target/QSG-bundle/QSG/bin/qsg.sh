@@ -1795,8 +1795,8 @@ case $scenario in
 	4)
 	# Check whether the wso2-is and tomcat servers exits and if they don't download and install them.
 	setup_servers
-	create_multifactor_auth
-	end_message saml2-web-app-dispatch.com saml2-web-app-swift.com
+    create_multifactor_auth
+    end_message saml2-web-app-dispatch.com saml2-web-app-swift.com
 	delete_idp 05 urn:deleteIdP https://localhost:9443/services/IdentityProviderMgtService.IdentityProviderMgtServiceHttpsSoap11Endpoint/
 	break ;;
 
